@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            DayOne dayOne = new DayOne();
+            string projectPath = Directory.GetCurrentDirectory();
+
+            DayOne dayOne = new DayOne(projectPath);
             dayOne.Run();
             Console.ReadKey();
         }

@@ -8,15 +8,19 @@ namespace AdventOfCode
 {
     internal class DayOne
     {
-
+        private string _projectPath;
+        private const string _challengeTextFileName = "DayOnePuzzleInput.txt";
+        public DayOne(string projectPath)
+        {
+            _projectPath = projectPath;
+        }
 
         public void Run()
-        {
+        { 
             try 
             {
                 // Pull in the txt, line by line, of all the rotations and how far they will rotate
-                //StreamReader input = new StreamReader("..\\..\\..\\DayOnePuzzleInput.txt");
-                StreamReader input = new StreamReader("..\\..\\..\\DayOnePuzzleInput.txt");
+                StreamReader input = new StreamReader(Path.Combine(_projectPath, _challengeTextFileName));
                 string line;
                 int start = 50; //22 for sample
                 int currentPlacement = start;
