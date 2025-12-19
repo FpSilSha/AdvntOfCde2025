@@ -70,15 +70,7 @@ namespace AdventOfCode
 
                     while ((doubledNumber <= upperBound) && (long.Parse(numberToCheck) <= upperBound)) //long.Parse(numberToCheck) <= upperBound
                     {
-                        //// A 'double' number for ID can't exist on odd length IDs.
-                        //if (startingNumber.Length % 2 != 0)
-                        //{
-                        //    // This part of the code will be hit until numberToCheck is an even length and still less
-                        //    // than upperBound
-
-                        //    numberToCheck = IncrementStringInt64(numberToCheck);
-                        //    continue;
-                        //}
+                        
                         // Parse the string into an int and check if its still within upper bound range and lower bound range.
                         doubledNumber = long.Parse((numberToCheck + numberToCheck));
                         // Skip loop cases
